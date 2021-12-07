@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct node
+{
+    int data;
+    struct node *link;
+};
+int main()
+{
+    int a,b,c;
+    struct node *head=malloc(sizeof(struct node));
+    head->data=a;
+    head->link=NULL;
+    
+    struct node *current=malloc(sizeof(struct node));
+    current->data=b;
+    current->link=NULL;
+    head->link=current;
+    
+    struct node *current2=malloc(sizeof(struct node));
+    current2->data=c;
+    current2->link=NULL;
+    current->link=current2;
+    
+    count_node_(head);
+}
+void count_node_(struct node *head)
+{
+    int c=0;
+    if(head==NULL)
+    {
+        printf("the linked list is empty");
+    }
+    struct node *ptr=NULL;
+    ptr=head;
+    while (ptr!=NULL)
+    {
+        c=c+1;
+        printf("%d\n",ptr->data);
+        ptr=ptr->link;
+    }
+    printf("%d",c);
+}
