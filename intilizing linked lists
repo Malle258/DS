@@ -7,18 +7,17 @@ struct node
 };
 int main()
 {
-    int a,b,c;
     struct node *head=malloc(sizeof(struct node));
-    head->data=a;
+    head->data=16;
     head->link=NULL;
     
     struct node *current=malloc(sizeof(struct node));
-    current->data=b;
+    current->data=72;
     current->link=NULL;
     head->link=current;
     
     struct node *current2=malloc(sizeof(struct node));
-    current2->data=c;
+    current2->data=30;
     current2->link=NULL;
     current->link=current2;
     
